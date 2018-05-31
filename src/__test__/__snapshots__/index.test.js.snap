@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add depth to array element 1`] = `
+Array [
+  Object {
+    "depth": 0,
+    "id": "1",
+    "parent": null,
+  },
+  Object {
+    "depth": 0,
+    "id": "2",
+    "parent": null,
+  },
+  Object {
+    "depth": 1,
+    "id": "4",
+    "parent": "2",
+  },
+  Object {
+    "depth": 2,
+    "id": "5",
+    "parent": "4",
+  },
+  Object {
+    "depth": 2,
+    "id": "6",
+    "parent": "4",
+  },
+  Object {
+    "depth": 3,
+    "id": "7",
+    "parent": "6",
+  },
+  Object {
+    "depth": 0,
+    "id": "3",
+    "parent": null,
+  },
+]
+`;
+
+exports[`generate tree from array 1`] = `
+Array [
+  Object {
+    "children": Array [],
+    "id": "1",
+    "parent": null,
+  },
+  Object {
+    "children": Array [
+      Object {
+        "children": Object {
+          "children": Array [
+            Object {
+              "children": Object {
+                "children": Array [],
+                "id": "5",
+                "parent": "4",
+              },
+              "depth": 2,
+              "id": "5",
+              "parent": "4",
+            },
+            Object {
+              "children": Object {
+                "children": Array [
+                  Object {
+                    "children": Object {
+                      "children": Array [],
+                      "id": "7",
+                      "parent": "6",
+                    },
+                    "depth": 3,
+                    "id": "7",
+                    "parent": "6",
+                  },
+                ],
+                "id": "6",
+                "parent": "4",
+              },
+              "depth": 2,
+              "id": "6",
+              "parent": "4",
+            },
+          ],
+          "id": "4",
+          "parent": "2",
+        },
+        "depth": 1,
+        "id": "4",
+        "parent": "2",
+      },
+    ],
+    "id": "2",
+    "parent": null,
+  },
+  Object {
+    "children": Array [],
+    "id": "3",
+    "parent": null,
+  },
+]
+`;
